@@ -1,0 +1,14 @@
+Fs = 1000;
+T = 1/Fs;
+L = 1000;
+t = 0:1/Fs:1-1/Fs;
+
+x = 0.7*sin(2*pi*50*t) + sin(2*pi*120*t);
+y = x+2*randn(size(t));
+
+NFFT = 2^nextpow2(L);
+Y = fft(y, NFFT)/L;
+plot(Fs*t(1:50), y(1:50));
+%M = y;
+M = abs(y);
+plot(n, M);

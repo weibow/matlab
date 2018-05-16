@@ -38,4 +38,4 @@ sketcher_si.si4project/
 *./Debug/
 *./.vs/
 *.orig
-
+*.asv
